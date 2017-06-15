@@ -151,7 +151,7 @@
 			<Add directory="..\common" />
 		</Compiler>
 		<Linker>
-			<Add option="-enable-auto-import" />
+			<Add option="--enable-auto-import" />
 			<Add library="kernel32" />
 			<Add library="user32" />
 			<Add library="gdi32" />

@@ -1102,7 +1102,7 @@ extern "C"
         try {
             Jack::JackDriverClientInterface* driver = new Jack::JackWaitThreadedDriver (
                 new Jack::JackNetOneDriver("system", "net_pcm", engine, table, listen_port, mtu,
-                                             capture_ports_midi, playback_ports_midi, capture_ports, playback_ports,
+                                             capture_ports, playback_ports, capture_ports_midi, playback_ports_midi,
                                              sample_rate, period_size, resample_factor,
                                              "net_pcm", handle_transport_sync, bitdepth, use_autoconfig, latency, redundancy,
                                              dont_htonl_floats, always_deadline, jitter_val));

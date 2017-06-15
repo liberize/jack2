@@ -469,34 +469,64 @@ netjack_poll (int sockfd, int timeout)
 int
 netjack_poll (int sockfd, int timeout)
 {
-    jack_error( "netjack_poll not implemented" );
-    return 0;
+//    jack_error( "netjack_poll not implemented" );
+
+    fd_set fds;
+    struct timeval timeout_val;
+    int poll_err = 0;
+    while (poll_err == 0) {
+        FD_ZERO( &fds );
+        FD_SET( sockfd, &fds );
+
+        timeout_val.tv_sec = timeout / 1000;
+        timeout_val.tv_usec = (timeout % 1000) * 1000;
+
+        poll_err = select (0, &fds, NULL, NULL, &timeout_val);
+    }
+
+    if (poll_err == SOCKET_ERROR) {
+        int err = WSAGetLastError();
+        LPTSTR err_str = 0;
+        FormatMessage( FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
+           NULL, err, 0, (LPTSTR)&err_str, 0, NULL);
+        jack_error("Error %d: %s", err, err_str);
+        LocalFree(err_str);
+        return 0;
+    }
+    return 1;
 }
 int
 netjack_poll_deadline (int sockfd, jack_time_t deadline)
 {
     fd_set fds;
-    FD_ZERO( &fds );
-    FD_SET( sockfd, &fds );
-
-    struct timeval timeout;
-    while( 1 ) {
+    struct timeval timeout_val;
+    int poll_err = 0;
+    while (poll_err == 0) {
         jack_time_t now = jack_get_time();
         if( now >= deadline )
             return 0;
 
+        FD_ZERO( &fds );
+        FD_SET( sockfd, &fds );
+
         int timeout_usecs = (deadline - now);
         //jack_error( "timeout = %d", timeout_usecs );
-        timeout.tv_sec = 0;
-        timeout.tv_usec = (timeout_usecs < 500) ? 500 : timeout_usecs;
-        timeout.tv_usec = (timeout_usecs > 1000000) ? 500000 : timeout_usecs;
+        timeout_val.tv_sec = 0;
+        timeout_val.tv_usec = (timeout_usecs < 500) ? 500 : timeout_usecs;
+        timeout_val.tv_usec = (timeout_usecs > 1000000) ? 500000 : timeout_usecs;
 
-        int poll_err = select (0, &fds, NULL, NULL, &timeout);
-        if( poll_err != 0 )
-            return poll_err;
+        poll_err = select (0, &fds, NULL, NULL, &timeout_val);
     }
 
-    return 0;
+    if (poll_err == SOCKET_ERROR) {
+        int err = WSAGetLastError();
+        LPTSTR err_str = 0;
+        FormatMessage( FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM,
+           NULL, err, 0, (LPTSTR)&err_str, 0, NULL);
+        jack_error("Error %d: %s", err, err_str);
+        LocalFree(err_str);
+    }
+    return poll_err;
 }
 #endif
 // This now reads all a socket has into the cache.

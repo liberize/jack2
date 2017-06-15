@@ -706,14 +706,13 @@ netjack_startup( netjack_driver_state_t *netj )
             }
             first_pack_len = recvfrom (netj->sockfd, (char *)first_packet, sizeof (jacknet_packet_header), 0, (struct sockaddr*) & netj->syncsource_address, &address_size);
 #ifdef WIN32
-            if( first_pack_len == -1 ) {
+            if( first_pack_len == -1 && WSAGetLastError() == 0 ) {
                 first_pack_len = sizeof(jacknet_packet_header);
                 break;
             }
-#else
+#endif
             if (first_pack_len == sizeof (jacknet_packet_header))
                 break;
-#endif
         }
         netj->srcaddress_valid = 1;
 

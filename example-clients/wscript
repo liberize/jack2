@@ -63,6 +63,8 @@ def build(bld):
             if not bld.env['BUILD_NETLIB']:
                 continue
             use = ['netlib']
+        elif example_program == 'jack_simdtests':
+            use = ['clientlib', 'STDC++']
         else:
             use = ['clientlib']
 

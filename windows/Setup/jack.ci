@@ -99,12 +99,12 @@
 <_><src>.\src\32bits\JackRouter.ini</><dest>inst</><custom>32bits</><ifexist>overnewer</><recurs>0</></>
 <_><src>.\src\32bits\msvcr100.dll</><dest>inst</><custom>32bits</><ifexist>overnewer</><recurs>0</></>
 <_><src>.\src\32bits\msvcp100.dll</><dest>inst</><custom>32bits</><ifexist>overnewer</><recurs>0</></>
-<_><src>.\qjackctl\mingwm10.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
-<_><src>.\qjackctl\qjackctl.exe</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
-<_><src>.\qjackctl\QtCore4.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
-<_><src>.\qjackctl\QtGui4.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
-<_><src>.\qjackctl\QtXml4.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
-<_><src>.\qjackctl\libgcc_s_dw2-1.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
+<_><src>.\qjackctl\32bits\mingwm10.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
+<_><src>.\qjackctl\32bits\qjackctl.exe</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
+<_><src>.\qjackctl\32bits\QtCore4.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
+<_><src>.\qjackctl\32bits\QtGui4.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
+<_><src>.\qjackctl\32bits\QtXml4.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
+<_><src>.\qjackctl\32bits\libgcc_s_dw2-1.dll</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
 <_><src>.\src\COPYING</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
 <_><src>.\src\README</><dest>inst</><custom></><ifexist>overnewer</><recurs>0</></>
 

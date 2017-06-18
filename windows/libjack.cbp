@@ -7,8 +7,8 @@
 		<Option compiler="mingw_64" />
 		<Build>
 			<Target title="Win32 Release 64bits">
-				<Option output="Release64\bin\libjack64" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release64\libjack" />
+				<Option output="Release64/bin/libjack64" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release64/libjack" />
 				<Option type="3" />
 				<Option compiler="mingw_64" />
 				<Option createDefFile="1" />
@@ -26,11 +26,11 @@
 					<Add option="-D__SMP__" />
 					<Add option="-DHAVE_CONFIG_H" />
 					<Add directory="." />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
-					<Add directory="tre-0.8.0\win32" />
-					<Add directory="tre-0.8.0\lib" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
+					<Add directory="tre-0.8.0/win32" />
+					<Add directory="tre-0.8.0/lib" />
 				</Compiler>
 				<Linker>
 					<Add library="kernel32" />
@@ -49,8 +49,8 @@
 				</Linker>
 			</Target>
 			<Target title="Win32 Debug 64bits">
-				<Option output="Debug64\bin\libjack64" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Debug64\libjack" />
+				<Option output="Debug64/bin/libjack64" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug64/libjack" />
 				<Option type="3" />
 				<Option compiler="mingw_64" />
 				<Option createDefFile="1" />
@@ -68,11 +68,11 @@
 					<Add option="-D__SMP__" />
 					<Add option="-DHAVE_CONFIG_H" />
 					<Add directory="." />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
-					<Add directory="tre-0.8.0\win32" />
-					<Add directory="tre-0.8.0\lib" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
+					<Add directory="tre-0.8.0/win32" />
+					<Add directory="tre-0.8.0/lib" />
 				</Compiler>
 				<Linker>
 					<Add library="kernel32" />
@@ -91,8 +91,8 @@
 				</Linker>
 			</Target>
 			<Target title="Win32 Profiling 64bits">
-				<Option output="Release64\bin\libjack64" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release64\libjack" />
+				<Option output="Release64/bin/libjack64" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release64/libjack" />
 				<Option type="3" />
 				<Option compiler="mingw_64" />
 				<Option createDefFile="1" />
@@ -111,11 +111,11 @@
 					<Add option="-DJACK_MONITOR" />
 					<Add option="-DHAVE_CONFIG_H" />
 					<Add directory="." />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
-					<Add directory="tre-0.8.0\win32" />
-					<Add directory="tre-0.8.0\lib" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
+					<Add directory="tre-0.8.0/win32" />
+					<Add directory="tre-0.8.0/lib" />
 				</Compiler>
 				<Linker>
 					<Add library="kernel32" />
@@ -134,10 +134,10 @@
 				</Linker>
 			</Target>
 			<Target title="Win32 Release 32bits">
-				<Option output="Release\bin\libjack" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release\libjack" />
+				<Option output="Release/bin/libjack" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/libjack" />
 				<Option type="3" />
-				<Option compiler="mingw_64" />
+				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
@@ -154,11 +154,11 @@
 					<Add option="-D__SMP__" />
 					<Add option="-DHAVE_CONFIG_H" />
 					<Add directory="." />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
-					<Add directory="tre-0.8.0\win32" />
-					<Add directory="tre-0.8.0\lib" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
+					<Add directory="tre-0.8.0/win32" />
+					<Add directory="tre-0.8.0/lib" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -181,16 +181,16 @@
 				</ExtraCommands>
 			</Target>
 			<Target title="Win32 Debug 32bits">
-				<Option output="Debug\bin\libjack" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Debug\libjack" />
+				<Option output="Debug/bin/libjack" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug/libjack" />
 				<Option type="3" />
-				<Option compiler="mingw_64" />
+				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-Wall" />
-					<Add option="-g" />
 					<Add option="-m32" />
+					<Add option="-g" />
 					<Add option="-DWIN32" />
 					<Add option="-D_DEBUG" />
 					<Add option="-D_CONSOLE" />
@@ -201,11 +201,11 @@
 					<Add option="-D__SMP__" />
 					<Add option="-DHAVE_CONFIG_H" />
 					<Add directory="." />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
-					<Add directory="tre-0.8.0\win32" />
-					<Add directory="tre-0.8.0\lib" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
+					<Add directory="tre-0.8.0/win32" />
+					<Add directory="tre-0.8.0/lib" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -228,10 +228,10 @@
 				</ExtraCommands>
 			</Target>
 			<Target title="Win32 Profiling 32bits">
-				<Option output="Release\bin\libjack" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release\libjack" />
+				<Option output="Release/bin/libjack" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/libjack" />
 				<Option type="3" />
-				<Option compiler="mingw_64" />
+				<Option compiler="gcc" />
 				<Option createDefFile="1" />
 				<Option createStaticLib="1" />
 				<Compiler>
@@ -249,11 +249,11 @@
 					<Add option="-DJACK_MONITOR" />
 					<Add option="-DHAVE_CONFIG_H" />
 					<Add directory="." />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
-					<Add directory="tre-0.8.0\win32" />
-					<Add directory="tre-0.8.0\lib" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
+					<Add directory="tre-0.8.0/win32" />
+					<Add directory="tre-0.8.0/lib" />
 				</Compiler>
 				<Linker>
 					<Add option="-m32" />
@@ -294,39 +294,39 @@
 			<Add library="odbccp32" />
 			<Add library="winmm" />
 		</Linker>
-		<Unit filename="..\common\JackAPI.cpp" />
-		<Unit filename="..\common\JackActivationCount.cpp" />
-		<Unit filename="..\common\JackAudioPort.cpp" />
-		<Unit filename="..\common\JackClient.cpp" />
-		<Unit filename="..\common\JackConnectionManager.cpp" />
-		<Unit filename="..\common\JackDebugClient.cpp">
+		<Unit filename="../common/JackAPI.cpp" />
+		<Unit filename="../common/JackActivationCount.cpp" />
+		<Unit filename="../common/JackAudioPort.cpp" />
+		<Unit filename="../common/JackClient.cpp" />
+		<Unit filename="../common/JackConnectionManager.cpp" />
+		<Unit filename="../common/JackDebugClient.cpp">
 			<Option target="Win32 Debug 64bits" />
 			<Option target="Win32 Debug 32bits" />
 		</Unit>
-		<Unit filename="..\common\JackEngineControl.cpp" />
-		<Unit filename="..\common\JackEngineProfiling.cpp">
+		<Unit filename="../common/JackEngineControl.cpp" />
+		<Unit filename="../common/JackEngineProfiling.cpp">
 			<Option target="Win32 Profiling" />
 		</Unit>
-		<Unit filename="..\common\JackError.cpp" />
-		<Unit filename="..\common\JackException.cpp" />
-		<Unit filename="..\common\JackFrameTimer.cpp" />
-		<Unit filename="..\common\JackGenericClientChannel.cpp" />
-		<Unit filename="..\common\JackGlobals.cpp" />
-		<Unit filename="..\common\JackGraphManager.cpp" />
-		<Unit filename="..\common\JackLibAPI.cpp" />
-		<Unit filename="..\common\JackLibClient.cpp" />
-		<Unit filename="..\common\JackMessageBuffer.cpp" />
-		<Unit filename="..\common\JackMidiAPI.cpp" />
-		<Unit filename="..\common\JackMidiPort.cpp" />
-		<Unit filename="..\common\JackPort.cpp" />
-		<Unit filename="..\common\JackPortType.cpp" />
-		<Unit filename="..\common\JackShmMem.cpp" />
-		<Unit filename="..\common\JackTools.cpp" />
-		<Unit filename="..\common\JackTransportEngine.cpp" />
-		<Unit filename="..\common\ringbuffer.c">
+		<Unit filename="../common/JackError.cpp" />
+		<Unit filename="../common/JackException.cpp" />
+		<Unit filename="../common/JackFrameTimer.cpp" />
+		<Unit filename="../common/JackGenericClientChannel.cpp" />
+		<Unit filename="../common/JackGlobals.cpp" />
+		<Unit filename="../common/JackGraphManager.cpp" />
+		<Unit filename="../common/JackLibAPI.cpp" />
+		<Unit filename="../common/JackLibClient.cpp" />
+		<Unit filename="../common/JackMessageBuffer.cpp" />
+		<Unit filename="../common/JackMidiAPI.cpp" />
+		<Unit filename="../common/JackMidiPort.cpp" />
+		<Unit filename="../common/JackPort.cpp" />
+		<Unit filename="../common/JackPortType.cpp" />
+		<Unit filename="../common/JackShmMem.cpp" />
+		<Unit filename="../common/JackTools.cpp" />
+		<Unit filename="../common/JackTransportEngine.cpp" />
+		<Unit filename="../common/ringbuffer.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="..\common\shm.c">
+		<Unit filename="../common/shm.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="JackMMCSS.cpp" />
@@ -343,60 +343,61 @@
 		<Unit filename="libjack.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\regcomp.c">
+		<Unit filename="tre-0.8.0/lib/regcomp.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\regerror.c">
+		<Unit filename="tre-0.8.0/lib/regerror.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\regex.h" />
-		<Unit filename="tre-0.8.0\lib\regexec.c">
+		<Unit filename="tre-0.8.0/lib/regex.h" />
+		<Unit filename="tre-0.8.0/lib/regexec.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-ast.c">
+		<Unit filename="tre-0.8.0/lib/tre-ast.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-ast.h" />
-		<Unit filename="tre-0.8.0\lib\tre-compile.c">
+		<Unit filename="tre-0.8.0/lib/tre-ast.h" />
+		<Unit filename="tre-0.8.0/lib/tre-compile.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-compile.h" />
-		<Unit filename="tre-0.8.0\lib\tre-internal.h" />
-		<Unit filename="tre-0.8.0\lib\tre-match-approx.c">
+		<Unit filename="tre-0.8.0/lib/tre-compile.h" />
+		<Unit filename="tre-0.8.0/lib/tre-internal.h" />
+		<Unit filename="tre-0.8.0/lib/tre-match-approx.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-match-backtrack.c">
+		<Unit filename="tre-0.8.0/lib/tre-match-backtrack.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-match-parallel.c">
+		<Unit filename="tre-0.8.0/lib/tre-match-parallel.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-match-utils.h" />
-		<Unit filename="tre-0.8.0\lib\tre-mem.c">
+		<Unit filename="tre-0.8.0/lib/tre-match-utils.h" />
+		<Unit filename="tre-0.8.0/lib/tre-mem.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-mem.h" />
-		<Unit filename="tre-0.8.0\lib\tre-parse.c">
+		<Unit filename="tre-0.8.0/lib/tre-mem.h" />
+		<Unit filename="tre-0.8.0/lib/tre-parse.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-parse.h" />
-		<Unit filename="tre-0.8.0\lib\tre-stack.c">
+		<Unit filename="tre-0.8.0/lib/tre-parse.h" />
+		<Unit filename="tre-0.8.0/lib/tre-stack.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\tre-stack.h" />
-		<Unit filename="tre-0.8.0\lib\tre.h" />
-		<Unit filename="tre-0.8.0\lib\xmalloc.c">
+		<Unit filename="tre-0.8.0/lib/tre-stack.h" />
+		<Unit filename="tre-0.8.0/lib/tre.h" />
+		<Unit filename="tre-0.8.0/lib/xmalloc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tre-0.8.0\lib\xmalloc.h" />
+		<Unit filename="tre-0.8.0/lib/xmalloc.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
 			<AutoVersioning>
 				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
-				<Settings autoincrement="1" date_declarations="1" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="108" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
 				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
 			</AutoVersioning>
 		</Extensions>
 	</Project>

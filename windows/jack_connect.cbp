@@ -7,119 +7,119 @@
 		<Option compiler="mingw_64" />
 		<Build>
 			<Target title="Win32 Release 64bits">
-				<Option output="Release64\bin\jack_connect" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release64\" />
+				<Option output="Release64/bin/jack_connect" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release64/" />
 				<Option type="1" />
 				<Option compiler="mingw_64" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-Wall" />
-					<Add directory="..\example-clients" />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
+					<Add directory="../example-clients" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
 				</Compiler>
 				<Linker>
-					<Add directory="Release64\bin" />
-                    <Add library="libjack64" />
+					<Add library="libjack64" />
+					<Add directory="Release64/bin" />
 				</Linker>
 			</Target>
 			<Target title="Win32 Debug 64bits">
-				<Option output="Debug64\bin\jack_connect" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Debug64\" />
+				<Option output="Debug64/bin/jack_connect" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug64/" />
 				<Option type="1" />
 				<Option compiler="mingw_64" />
 				<Compiler>
 					<Add option="-Wall" />
 					<Add option="-g" />
-					<Add directory="..\example-clients" />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
+					<Add directory="../example-clients" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
 				</Compiler>
 				<Linker>
-					<Add directory="Debug64\bin" />
-                    <Add library="libjack64" />
+					<Add library="libjack64" />
+					<Add directory="Debug64/bin" />
 				</Linker>
 			</Target>
 			<Target title="Win32 Profiling 64bits">
-				<Option output="Release64\bin\jack_connect" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release64\" />
+				<Option output="Release64/bin/jack_connect" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release64/" />
 				<Option type="1" />
 				<Option compiler="mingw_64" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-Wall" />
 					<Add option="-DJACK_MONITOR" />
-					<Add directory="..\example-clients" />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
+					<Add directory="../example-clients" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
 				</Compiler>
 				<Linker>
-					<Add directory="Release64\bin" />
-                    <Add library="libjack64" />
+					<Add library="libjack64" />
+					<Add directory="Release64/bin" />
 				</Linker>
 			</Target>
-            <Target title="Win32 Release 32bits">
-				<Option output="Release\bin\jack_connect" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release\" />
+			<Target title="Win32 Release 32bits">
+				<Option output="Release/bin/jack_connect" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/" />
 				<Option type="1" />
-				<Option compiler="mingw_64" />
+				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-Wall" />
-                    <Add option="-m32" />
-					<Add directory="..\example-clients" />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
+					<Add option="-m32" />
+					<Add directory="../example-clients" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
 				</Compiler>
 				<Linker>
-                    <Add option="-m32" />
-					<Add directory="Release\bin" />
-                    <Add library="libjack" />
+					<Add option="-m32" />
+					<Add library="libjack" />
+					<Add directory="Release/bin" />
 				</Linker>
 			</Target>
 			<Target title="Win32 Debug 32bits">
-				<Option output="Debug\bin\jack_connect" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Debug\" />
+				<Option output="Debug/bin/jack_connect" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Debug/" />
 				<Option type="1" />
-				<Option compiler="mingw_64" />
+				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-Wall" />
+					<Add option="-m32" />
 					<Add option="-g" />
-                    <Add option="-m32" />
-					<Add directory="..\example-clients" />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
+					<Add directory="../example-clients" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
 				</Compiler>
 				<Linker>
-                    <Add option="-m32" />
-					<Add directory="Release\bin" />
-                    <Add library="libjack" />
+					<Add option="-m32" />
+					<Add library="libjack" />
+					<Add directory="Release/bin" />
 				</Linker>
 			</Target>
 			<Target title="Win32 Profiling 32bits">
-				<Option output="Release\bin\jack_connect" prefix_auto="1" extension_auto="1" />
-				<Option object_output="Release\" />
+				<Option output="Release/bin/jack_connect" prefix_auto="1" extension_auto="1" />
+				<Option object_output="Release/" />
 				<Option type="1" />
-				<Option compiler="mingw_64" />
+				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-Wall" />
-                    <Add option="-m32" />
+					<Add option="-m32" />
 					<Add option="-DJACK_MONITOR" />
-					<Add directory="..\example-clients" />
-					<Add directory="..\windows" />
-					<Add directory="..\common\jack" />
-					<Add directory="..\common" />
+					<Add directory="../example-clients" />
+					<Add directory="../windows" />
+					<Add directory="../common/jack" />
+					<Add directory="../common" />
 				</Compiler>
 				<Linker>
-                    <Add option="-m32" />
-					<Add directory="Release\bin" />
-                    <Add library="libjack" />
+					<Add option="-m32" />
+					<Add library="libjack" />
+					<Add directory="Release/bin" />
 				</Linker>
 			</Target>
 		</Build>
@@ -140,7 +140,7 @@
 			<Add library="odbc32" />
 			<Add library="odbccp32" />
 		</Linker>
-		<Unit filename="..\example-clients\connect.c">
+		<Unit filename="../example-clients/connect.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="getopt.c">
@@ -154,8 +154,9 @@
 			<debugger />
 			<AutoVersioning>
 				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
-				<Settings autoincrement="1" date_declarations="1" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="108" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
 				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
 			</AutoVersioning>
 			<envvars />
 		</Extensions>

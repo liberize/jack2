@@ -21,23 +21,28 @@
   <PropertyGroup Label="Globals">
     <SccProjectName />
     <SccLocalPath />
+    <ProjectGuid>{CD061AB2-B1B2-4AC2-AC0A-0E79FDF60FEE}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -88,7 +93,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
       <MinimalRebuild>true</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\..\..\..\ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -131,7 +136,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\..\..\..\..\ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -174,7 +179,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\..\..\..\..\ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -216,7 +221,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>..\..\..\..\..\ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>ASIOSDK2\common;..\..\common;..\..\common\jack;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;PSAPI_VERSION=2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
@@ -249,11 +254,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\ASIOSDK2\common\combase.cpp" />
-    <ClCompile Include="..\..\..\..\..\ASIOSDK2\common\dllentry.cpp" />
+    <ClCompile Include="ASIOSDK2\common\combase.cpp" />
+    <ClCompile Include="ASIOSDK2\common\dllentry.cpp" />
     <ClCompile Include="JackRouter.cpp" />
     <ClCompile Include="profport.cpp" />
-    <ClCompile Include="..\..\..\..\..\ASIOSDK2\common\register.cpp" />
+    <ClCompile Include="ASIOSDK2\common\register.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="JackRouter.def" />
@@ -262,15 +267,15 @@
     <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\common\asio.h" />
-    <ClInclude Include="..\..\Common\Asiodrvr.h" />
-    <ClInclude Include="..\asiosmpl.h" />
-    <ClInclude Include="..\..\..\common\asiosys.h" />
-    <ClInclude Include="..\..\..\common\combase.h" />
-    <ClInclude Include="..\..\..\common\iasiodrv.h" />
+    <ClInclude Include="ASIOSDK2\common\asio.h" />
+    <ClInclude Include="ASIOSDK2\Common\Asiodrvr.h" />
+    <ClInclude Include="ASIOSDK2\driver\asiosample\asiosmpl.h" />
+    <ClInclude Include="ASIOSDK2\common\asiosys.h" />
+    <ClInclude Include="ASIOSDK2\common\combase.h" />
+    <ClInclude Include="ASIOSDK2\common\iasiodrv.h" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\Release64\bin\libjack64.lib" />
+    <!--<Library Include="..\Release64\bin\libjack64.lib" />-->
     <Library Include="..\Release\bin\libjack.lib" />
     <Library Include="Psapi.Lib" />
   </ItemGroup>
